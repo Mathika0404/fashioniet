@@ -55,8 +55,14 @@
   }
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: column;   /* makes icons vertical */
+  align-items: center;
+}
+
 .social-icons a {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -64,7 +70,7 @@
   background: #ff4d30;
   color: #fff;
   border-radius: 50%;
-  margin: 6px;
+  margin: 6px 0;   /* spacing vertically */
   font-size: 16px;
   transition: 0.3s;
 }
@@ -133,91 +139,7 @@
                             <div class="header-right f-right">
                                 <ul>
                                     <li class="login-btn"><a href="login2.html"><i class="far fa-user"></i></a></li>
-                                    <li class="d-shop-cart"><a href="#"><i class="flaticon-shopping-cart"></i> <span
-                                                class="cart-count">3</span></a>
-                                        <ul class="minicart">
-                                            <li>
-                                                <div class="cart-img">
-                                                    <a href="product-details.html">
-                                                        <img src="img/product/pro1.jpg" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="cart-content">
-                                                    <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
-                                                    </h3>
-                                                    <div class="cart-price">
-                                                        <span class="new">$ 229.9</span>
-                                                        <span>
-                                                            <del>$239.9</del>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="del-icon">
-                                                    <a href="404.html">
-                                                        <i class="far fa-trash-alt"></i>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="cart-img">
-                                                    <a href="product-details.html">
-                                                        <img src="img/product/pro2.jpg" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="cart-content">
-                                                    <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
-                                                    </h3>
-                                                    <div class="cart-price">
-                                                        <span class="new">$ 229.9</span>
-                                                        <span>
-                                                            <del>$239.9</del>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="del-icon">
-                                                    <a href="404.html">
-                                                        <i class="far fa-trash-alt"></i>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="cart-img">
-                                                    <a href="product-details.html">
-                                                        <img src="img/product/pro3.jpg" alt="" />
-                                                    </a>
-                                                </div>
-                                                <div class="cart-content">
-                                                    <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
-                                                    </h3>
-                                                    <div class="cart-price">
-                                                        <span class="new">$ 229.9</span>
-                                                        <span>
-                                                            <del>$239.9</del>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="del-icon">
-                                                    <a href="404.html">
-                                                        <i class="far fa-trash-alt"></i>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="total-price">
-                                                    <span class="f-left">Total:</span>
-                                                    <span class="f-right">$300.0</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkout-link">
-                                                    <a href="cart.html">Shopping Cart</a>
-                                                    <a class="red-color" href="checkout.html">Checkout</a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    
                                     </li>
                                 </ul>
                             </div>
@@ -314,9 +236,6 @@
   <div class="social-icons">
     <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
     <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
-    <a href="404.html" title="Behance"><i class="fab fa-behance"></i></a>
-    <a href="404.html" title="Dribbble"><i class="fab fa-dribbble"></i></a>
-    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     <a href="404.html" title="YouTube"><i class="fab fa-youtube"></i></a>
   </div>
 </div>
@@ -326,9 +245,9 @@
                             <div class="footer-widget pl-50 mb-40">
                                 <h3>Quick Links</h3>
                                 <ul class="footer-link">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop-full.html">Shop</a></li>
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="index2.html">Home</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
