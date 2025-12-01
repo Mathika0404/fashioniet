@@ -79,6 +79,16 @@
   background: #000;
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .postbox__video img {
+    margin-left: 0 !important;   /* remove left spacing */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;           /* center horizontally */
+    width: 90%;                  /* optional: fit nicely in mobile */
+  }
+}
     </style>
     <body>
 
@@ -164,7 +174,7 @@
                         <div class="breadcrumb-text text-center">
                             <h1>Blog</h1>
                             <ul class="breadcrumb-menu">
-                                <li><a href="index.html">home</a></li>
+                                <li><a href="index2.html">home</a></li>
                                 <li><span>blog</span></li>
                             </ul>
                         </div>
@@ -326,7 +336,7 @@
                             <ul class="recent-posts">
                                 <li>
                                     <div class="widget-posts-image">
-                                        <a href="#"><img src="img/blog/details/img1.jpg" alt=""></a>
+                                        <a href="#"><img src="img/blog/details/author.webp" alt=""></a>
                                     </div>
                                     <div class="widget-posts-body">
                                         <h6 class="widget-posts-title"><a href="#">Lorem ipsum dolor sit
@@ -336,7 +346,7 @@
                                 </li>
                                 <li>
                                     <div class="widget-posts-image">
-                                        <a href="404.html"><img src="img/blog/details/img2.jpg" alt=""></a>
+                                        <a href="404.html"><img src="img/blog/details/comments1.webp" alt=""></a>
                                     </div>
                                     <div class="widget-posts-body">
                                         <h6 class="widget-posts-title"><a href="#">Lorem ipsum dolor sit
@@ -346,7 +356,7 @@
                                 </li>
                                 <li>
                                     <div class="widget-posts-image">
-                                        <a href="404.html"><img src="img/blog/details/img3.jpg" alt=""></a>
+                                        <a href="404.html"><img src="img/blog/details/comments2.webp" alt=""></a>
                                     </div>
                                     <div class="widget-posts-body">
                                         <h6 class="widget-posts-title"><a href="#">Lorem ipsum dolor sit
