@@ -30,24 +30,59 @@
     </head>
         <style>
         /* PLUS symbol style */
-.plus-icon {
-  margin-left: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  pointer-events: none; /* prevents click conflict */
+.has-dropdown .submenu {
+  display: none;
 }
 
-/* Rotate plus when hover (optional) */
-.has-dropdown:hover .plus-icon {
-  transform: rotate(45deg);
+/* Arrow design */
+.dropdown-arrow {
+  cursor: pointer;
+  margin-left: 6px;
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Rotate arrow when open */
+.has-dropdown.open > .dropdown-arrow {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+/* Desktop only */
+@media (max-width: 768px) {
+  .dropdown-arrow {
+    display: none;
+  }
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ff4d30;
+  color: #fff;
+  border-radius: 50%;
+  margin: 6px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
-/* HIDE plus icon on mobile */
-@media (max-width: 768px) {
-  .plus-icon {
-    display: none;
-  }
+.social-icons a:hover {
+  background: #000;
+  transform: scale(1.1);
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input.error-border {
+  border: 1px solid red;
 }
 
     </style>
@@ -82,48 +117,26 @@
                             <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
-                                                                          <li class="has-dropdown">
-  <a href="index.html">
-    Home <span class="plus-icon">+</span>
-  </a>
+<li class="has-dropdown">
+  <a href="index.html">Home</a>
+
+  <!-- Arrow icon -->
+  <span class="dropdown-arrow">&#9662;</span>
+
   <ul class="submenu">
     <li>
-      <a href="./homepage_2/index2.html">Home Page 2</a>
+      <a href="index2.html">Home Page 2</a>
     </li>
   </ul>
 </li>
 
-                                           <li>
-                                            <a href="shop-filter.html">Products </a>
+                                             <li class="mega-menu">
+                                            <a href="shop-full.html">Shop</a>
                                         </li>
-
-                                        <li>
-                                            <a href="#">Pages</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="about.html">About Us</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="contact.html">Contact Us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="login.html">login</a>
-                                                </li>
-                                                <li>
-                                                    <a href="register.html">Register</a>
-                                                </li>
-                                                <li>
-                                                    <a href="cart.html">Shoping Cart</a>
-                                                </li>
-                                                <li>
-                                                    <a href="checkout.html">Checkout</a>
-                                                </li>
-                                                <li>
-                                                    <a href="wishlist.html">Wishlist</a>
-                                                </li>
-                                            </ul>
+                                         <li class="mega-menu">
+                                            <a href="about.html">About Us</a>
                                         </li>
+                                        
                                         <li>
                                             <a href="contact.html">Contact</a>
                                         </li>
@@ -261,24 +274,30 @@
                     <div class="col-lg-8 offset-lg-2">
                         <div class="basic-login">
                             <h3 class="text-center mb-60">Login From Here</h3>
-                            <form action="#">
-                                <label for="name">Email Address <span>**</span></label>
-                                <input id="name" type="text" placeholder="Enter Username or Email address..." />
-                                <label for="pass">Password <span>**</span></label>
-                                <input id="pass" type="password" placeholder="Enter password..." />
-                                <div class="login-action mb-20 fix">
-                                    <span class="log-rem f-left">
-                                        <input id="remember" type="checkbox" />
-                                        <label for="remember">Remember me!</label>
-                                    </span>
-                                    <span class="forgot-login f-right">
-                                        <a href="404.html">Lost your password?</a>
-                                    </span>
-                                </div>
-                                <button class="btn theme-btn-2 w-100">Login Now</button>
-                                <div class="or-divide"><span>or</span></div>
-                                <button class="btn theme-btn w-100">Register Now</button>
-                            </form>
+                <form id="loginForm">
+    <label for="name">Email Address <span>**</span></label>
+    <input id="name" type="email" placeholder="Enter Email address..." />
+    <small class="error" id="emailError"></small>
+
+    <label for="pass">Password <span>**</span></label>
+    <input id="pass" type="password" placeholder="Enter password..." />
+    <small class="error" id="passError"></small>
+
+    <div class="login-action mb-20 fix">
+        <span class="log-rem f-left">
+            <input id="remember" type="checkbox" />
+            <label for="remember">Remember me!</label>
+        </span>
+        <span class="forgot-login f-right">
+            <a href="404.html">forgot password?</a>
+        </span>
+    </div>
+
+    <button type="submit" class="btn theme-btn-2 w-100">Login Now</button>
+    <div class="or-divide"><span>or</span></div>
+    <button type="button" id="registerBtn" class="btn theme-btn w-100">Register Now</button>
+</form>
+
                         </div>
                     </div>
                 </div>
@@ -289,7 +308,7 @@
 
         </main>
 
-          <!-- footer start -->
+       <!-- footer start -->
         <footer class="footer-area pl-100 pr-100">
             <div class="footer-area box-90 pt-100 pb-60" data-background="img/bg/footer.jpg">
                 <div class="container">
@@ -297,7 +316,7 @@
                         <div class="col-xl-5 col-lg-6 col-md-6 ">
                             <div class="footer-widget mb-40 pr-70">
                                 <div class="footer-logo">
-                                    <a href="homepage_2/index2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 100px;" alt="stackly_logo"></a>
+                                    <a href="index.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 100px;" alt="stackly_logo"></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore mag na
@@ -317,43 +336,47 @@
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-3">
                             <div class="footer-widget mb-40">
-                                <h3>Social Media</h3>
-                                <ul class="footer-link">
-                                    <li><a href="404.html">Facebook</a></li>
-                                    <li><a href="404.html">Twitter</a></li>
-                                    <li><a href="404.html">Behance</a></li>
-                                    <li><a href="404.html"> Dribbble</a></li>
-                                    <li><a href="404.html">Linkedin</a></li>
-                                    <li><a href="404.html">Youtube</a></li>
-                                </ul>
-                            </div>
+  <h3>Social Media</h3>
+
+  <div class="social-icons">
+    <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="404.html" title="Behance"><i class="fab fa-behance"></i></a>
+    <a href="404.html" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="404.html" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+
                         </div>
                         <div class="col-xl-3 col-lg-2 col-md-3 d-md-none d-xl-block">
                             <div class="footer-widget pl-50 mb-40">
-                                <h3>Location</h3>
+                                <h3>Quick Links</h3>
                                 <ul class="footer-link">
-                                    <li><a href="404.html">New York</a></li>
-                                    <li><a href="404.html">Tokyo</a></li>
-                                    <li><a href="404.html">Dhaka</a></li>
-                                    <li><a href="404.html">Chittagong</a></li>
-                                    <li><a href="404.html">China</a></li>
-                                    <li><a href="404.html">Japan</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-full.html">Shop</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3">
-                            <div class="footer-widget mb-40">
-                                <h3>About</h3>
-                                <ul class="footer-link">
-                                    <li><a href="404.html">Terms & Conditions</a></li>
-                                    <li><a href="404.html"> Privacy Policy</a></li>
-                                    <li><a href="404.html">Contact Us</a></li>
-                                    <li><a href="404.html">FAQ</a></li>
-                                    <li><a href="404.html">Wholesale</a></li>
-                                    <li><a href="404.html">Direction</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                       <div class="col-xl-2 col-lg-3 col-md-3">
+    <div class="footer-widget mb-40">
+        <h3>Our Location</h3>
+        <div class="footer-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.901980541907!2d-74.00594118459403!3d40.71278377933039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3163f2e4b3%3A0x47a56d6c6c9df11a!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1701372812345!5m2!1sen!2sin" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -372,6 +395,7 @@
             </div>
         </footer>
         <!-- footer end -->
+
 
         <!-- Fullscreen search -->
         <div class="search-wrap">
@@ -408,6 +432,119 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+<script>
+/* Select elements */
+const loginForm = document.getElementById("loginForm");
+const email = document.getElementById("name");
+const password = document.getElementById("pass");
+const registerBtn = document.getElementById("registerBtn");
+const emailError = document.getElementById("emailError");
+const passError = document.getElementById("passError");
+
+/* Email validation */
+function validEmail(value) {
+  return value.includes("@") && value.includes(".");
+}
+
+/* Clear errors on typing */
+[email, password].forEach(field => {
+  field.addEventListener("input", () => {
+    emailError.textContent = "";
+    passError.textContent = "";
+    field.classList.remove("error-border");
+  });
+});
+
+/* Login validation */
+loginForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let valid = true;
+  emailError.textContent = "";
+  passError.textContent = "";
+  email.classList.remove("error-border");
+  password.classList.remove("error-border");
+
+  if (email.value.trim() === "" || !validEmail(email.value)) {
+    emailError.textContent = "Enter valid email address.";
+    email.classList.add("error-border");
+    valid = false;
+  }
+
+  if (password.value.trim() === "") {
+    passError.textContent = "Password is required.";
+    password.classList.add("error-border");
+    valid = false;
+  }
+
+  if (valid) {
+    alert("This Page is 404 Error");
+  }
+});
+
+/* Register button logic */
+registerBtn.addEventListener("click", function () {
+
+  let emailVal = email.value.trim();
+  let passVal = password.value.trim();
+
+  emailError.textContent = "";
+  passError.textContent = "";
+  email.classList.remove("error-border");
+  password.classList.remove("error-border");
+
+  // Step 1: If empty
+  if (emailVal === "" || passVal === "") {
+    alert("Please fill all details first.");
+    
+    if (emailVal === "") {
+      emailError.textContent = "Email is required.";
+      email.classList.add("error-border");
+    }
+
+    if (passVal === "") {
+      passError.textContent = "Password is required.";
+      password.classList.add("error-border");
+    }
+    return;
+  }
+
+  // Step 2: If invalid email
+  if (!validEmail(emailVal)) {
+    emailError.textContent = "Enter a valid email.";
+    email.classList.add("error-border");
+    return;
+  }
+
+  // Step 3: If everything filled → show 404 popup
+  alert("This Page is 404 Error");
+
+});
+
+document.querySelectorAll(".dropdown-arrow").forEach(function(arrow) {
+
+  arrow.addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent menu collapse
+
+    let parent = this.parentElement;
+    let submenu = parent.querySelector(".submenu");
+
+    // Toggle
+    parent.classList.toggle("open");
+
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+
+  });
+
+});
+</script>
+
+
     </body>
 
 <!-- Mirrored from wphix.com/template/vue/vue/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:50 GMT -->

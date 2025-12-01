@@ -28,25 +28,51 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
     <style>
-.plus-icon {
+.has-dropdown .submenu {
+  display: none;
+}
+
+/* Arrow design */
+.dropdown-arrow {
+  cursor: pointer;
   margin-left: 6px;
-  font-weight: bold;
   font-size: 14px;
-  pointer-events: none; /* prevents click conflict */
+  user-select: none;
+    color: white; /* arrow color */
 }
 
-/* Rotate plus when hover (optional) */
-.has-dropdown:hover .plus-icon {
-  transform: rotate(45deg);
-  transition: 0.3s;
+/* Rotate arrow when open */
+.has-dropdown.open > .dropdown-arrow {
+  transform: rotate(180deg);
+  display: inline-block;
 }
 
-/* HIDE plus icon on mobile */
+/* Desktop only */
 @media (max-width: 768px) {
-  .plus-icon {
+  .dropdown-arrow {
     display: none;
   }
 }
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #ff4d30;
+  color: #fff;
+  border-radius: 50%;
+  margin: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #000;
+  transform: scale(1.1);
+}
+
 
     </style>
     <body>
@@ -78,10 +104,12 @@
                             <div class="main-menu menu-white text-center">
                                 <nav id="mobile-menu">
                                     <ul>
-                                       <li class="has-dropdown">
-  <a href="index2.html">
-    Home <span class="plus-icon">+</span>
-  </a>
+<li class="has-dropdown">
+  <a href="index2.html">Home</a>
+
+  <!-- Arrow icon -->
+  <span class="dropdown-arrow">&#9662;</span>
+
   <ul class="submenu">
     <li>
       <a href="index.html">Home Page 1</a>
@@ -92,33 +120,7 @@
                                         <li>
                                             <a href="blog.html">Blog </a>
                                         </li>
-                                        <li>
-                                            <a href="#">Pages</a>
-                                            <ul class="submenu">
-                                                 <li>
-                                                    <a href="about2.html">About Us</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="contact2.html">Contact Us</a>
-                                                </li>
-                                                <li>
-                                                    <a href="login2.html">login</a>
-                                                </li>
-                                                <li>
-                                                    <a href="registe2r.html">Register</a>
-                                                </li>
-                                                <li>
-                                                    <a href="cart2.html">Shoping Cart</a>
-                                                </li>
-                                                <li>
-                                                    <a href="checkout2.html">Checkout</a>
-                                                </li>
-                                                <li>
-                                                    <a href="wishlist2.html">Wishlist</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                       
                                         <li>
                                             <a href="contact2.html">Contact</a>
                                         </li>
@@ -243,10 +245,7 @@
                                 <div class="col-xl-12">
                                     <div class="slide-content slide-content-4 text-center pt-40">
                                         <h1 data-animation="fadeInUp" data-delay=".3s">New Arrival</h1>
-                                        <div class="slide-btn">
-                                            <a class="btn theme-btn" href="shop-filter.html" data-animation="fadeInLeft" data-delay=".6s">shop now</a>
-                                            <a class="btn white-btn" href="404.html" data-animation="fadeInRight" data-delay=".9s">category</a>
-                                        </div>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -264,10 +263,7 @@
                                 <div class="col-xl-12">
                                     <div class="slide-content slide-content-4 text-center pt-40">
                                         <h1 data-animation="fadeInUp" data-delay=".3s">Trendy Collection</h1>
-                                        <div class="slide-btn">
-                                            <a class="btn theme-btn" href="shop-filter.html" data-animation="fadeInLeft" data-delay=".6s">shop now</a>
-                                            <a class="btn white-btn" href="404.html" data-animation="fadeInRight" data-delay=".9s">category</a>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -285,10 +281,7 @@
                                 <div class="col-xl-12">
                                     <div class="slide-content slide-content-4 text-center pt-40">
                                         <h1 data-animation="fadeInUp" data-delay=".3s">Men Collection</h1>
-                                        <div class="slide-btn">
-                                            <a class="btn theme-btn" href="shop-filter.html" data-animation="fadeInLeft" data-delay=".6s">shop now</a>
-                                            <a class="btn white-btn" href="404.html" data-animation="fadeInRight" data-delay=".9s">category</a>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -338,28 +331,7 @@
                                 <p>Browse the huge variety of our products</p>
                             </div>
                         </div>
-                        <div class="col-xl-7 col-lg-12">
-                            <div class="product-tab mb-40">
-                                <ul class="nav product-nav  justify-content-xl-end" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                                            aria-selected="true">t-Shirt</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                                            aria-selected="false">Jeants</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                                            aria-selected="false">huddy</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="contact-tab1" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact"
-                                            aria-selected="false">pent</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                     
                     </div>
                     <div class="row">
                         <div class="col-xl-12">
@@ -385,10 +357,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                      
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -426,10 +395,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">30%</span>
-                                                            <span class="sale">Sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -469,10 +435,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -549,9 +512,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                        </div>
+                                                      
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -589,9 +550,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="sale">60%</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -668,10 +627,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -712,10 +668,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -798,10 +751,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -839,10 +789,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">30%</span>
-                                                            <span class="sale">Sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -919,10 +866,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -962,10 +906,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1042,9 +983,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1082,9 +1021,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="sale">60%</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1125,10 +1062,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                     
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1209,9 +1143,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1249,9 +1181,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="sale">60%</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1291,10 +1221,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1332,10 +1259,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">30%</span>
-                                                            <span class="sale">Sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1375,10 +1299,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1492,10 +1413,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1535,10 +1453,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1619,9 +1534,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1659,9 +1572,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="sale">60%</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1738,10 +1649,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                     
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1781,10 +1689,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1822,10 +1727,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">30%</span>
-                                                            <span class="sale">Sale</span>
-                                                        </div>
+                                                      
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1865,10 +1767,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                      
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -1945,10 +1844,7 @@
                                                                 <i class="flaticon-compare"></i>
                                                             </a>
                                                         </div>
-                                                        <div class="sale-tag">
-                                                            <span class="new">new</span>
-                                                            <span class="sale">sale</span>
-                                                        </div>
+                                                       
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="pro-cat mb-10">
@@ -2159,11 +2055,11 @@
                 </div>
             </div>
             <div class="instagram-btn">
-                <a href="404.html" class="btn white-btn"><i class="fab fa-instagram"></i> vue.store</a>
+                <a href="404.html" class="btn white-btn"><i class="fab fa-instagram"></i> stackly.store</a>
             </div>
         </section>
 
-          <!-- footer start -->
+        <!-- footer start -->
         <footer class="footer-area pl-100 pr-100">
             <div class="footer-area box-90 pt-100 pb-60" data-background="img/bg/footer.jpg">
                 <div class="container">
@@ -2171,7 +2067,7 @@
                         <div class="col-xl-5 col-lg-6 col-md-6 ">
                             <div class="footer-widget mb-40 pr-70">
                                 <div class="footer-logo">
-                                    <a href="index-2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 100px;" alt="stackly_logo"></a>
+                                    <a href="index.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 100px;" alt="stackly_logo"></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore mag na
@@ -2191,43 +2087,47 @@
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-3">
                             <div class="footer-widget mb-40">
-                                <h3>Social Media</h3>
-                                <ul class="footer-link">
-                                    <li><a href="404.html">Facebook</a></li>
-                                    <li><a href="404.html">Twitter</a></li>
-                                    <li><a href="404.html">Behance</a></li>
-                                    <li><a href="404.html"> Dribbble</a></li>
-                                    <li><a href="404.html">Linkedin</a></li>
-                                    <li><a href="404.html">Youtube</a></li>
-                                </ul>
-                            </div>
+  <h3>Social Media</h3>
+
+  <div class="social-icons">
+    <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="404.html" title="Behance"><i class="fab fa-behance"></i></a>
+    <a href="404.html" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="404.html" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+
                         </div>
                         <div class="col-xl-3 col-lg-2 col-md-3 d-md-none d-xl-block">
                             <div class="footer-widget pl-50 mb-40">
-                                <h3>Location</h3>
+                                <h3>Quick Links</h3>
                                 <ul class="footer-link">
-                                    <li><a href="404.html">New York</a></li>
-                                    <li><a href="404.html">Tokyo</a></li>
-                                    <li><a href="404.html">Dhaka</a></li>
-                                    <li><a href="404.html">Chittagong</a></li>
-                                    <li><a href="404.html">China</a></li>
-                                    <li><a href="404.html">Japan</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-full.html">Shop</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3">
-                            <div class="footer-widget mb-40">
-                                <h3>About</h3>
-                                <ul class="footer-link">
-                                    <li><a href="404.html">Terms & Conditions</a></li>
-                                    <li><a href="404.html"> Privacy Policy</a></li>
-                                    <li><a href="404.html">Contact Us</a></li>
-                                    <li><a href="404.html">FAQ</a></li>
-                                    <li><a href="404.html">Wholesale</a></li>
-                                    <li><a href="404.html">Direction</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                       <div class="col-xl-2 col-lg-3 col-md-3">
+    <div class="footer-widget mb-40">
+        <h3>Our Location</h3>
+        <div class="footer-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.901980541907!2d-74.00594118459403!3d40.71278377933039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3163f2e4b3%3A0x47a56d6c6c9df11a!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1701372812345!5m2!1sen!2sin" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -2246,7 +2146,6 @@
             </div>
         </footer>
         <!-- footer end -->
-
         <!-- Fullscreen search -->
         <div class="search-wrap">
             <div class="search-inner">
@@ -2283,6 +2182,29 @@
         <script src="js/instafeed.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+                <script>
+document.querySelectorAll(".dropdown-arrow").forEach(function(arrow) {
+
+  arrow.addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent menu collapse
+
+    let parent = this.parentElement;
+    let submenu = parent.querySelector(".submenu");
+
+    // Toggle
+    parent.classList.toggle("open");
+
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+
+  });
+
+});
+</script>
     </body>
 
 <!-- Mirrored from wphix.com/template/vue/vue/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:36 GMT -->

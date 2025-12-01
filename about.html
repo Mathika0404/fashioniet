@@ -41,22 +41,27 @@
 }
 
         /* PLUS symbol style */
-.plus-icon {
+.has-dropdown .submenu {
+  display: none;
+}
+
+/* Arrow design */
+.dropdown-arrow {
+  cursor: pointer;
   margin-left: 6px;
-  font-weight: bold;
   font-size: 14px;
-  pointer-events: none; /* prevents click conflict */
+  user-select: none;
 }
 
-/* Rotate plus when hover (optional) */
-.has-dropdown:hover .plus-icon {
-  transform: rotate(45deg);
-  transition: 0.3s;
+/* Rotate arrow when open */
+.has-dropdown.open > .dropdown-arrow {
+  transform: rotate(180deg);
+  display: inline-block;
 }
 
-/* HIDE plus icon on mobile */
+/* Desktop only */
 @media (max-width: 768px) {
-  .plus-icon {
+  .dropdown-arrow {
     display: none;
   }
 }
@@ -91,13 +96,15 @@
                             <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
-                                                                             <li class="has-dropdown">
-  <a href="index.html">
-    Home <span class="plus-icon">+</span>
-  </a>
+<li class="has-dropdown">
+  <a href="index.html">Home</a>
+
+  <!-- Arrow icon -->
+  <span class="dropdown-arrow">&#9662;</span>
+
   <ul class="submenu">
     <li>
-      <a href="./homepage_2/index2.html">Home Page 2</a>
+      <a href="index2.html">Home Page 2</a>
     </li>
   </ul>
 </li>
@@ -147,13 +154,13 @@
                                         <ul class="minicart">
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html">
+                                                    <a href="404.html">
                                                         <img src="img/product/pro1.jpg" alt="" />
                                                     </a>
                                                 </div>
                                                 <div class="cart-content">
                                                     <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
+                                                        <a href="404.html">Black & White Shoes</a>
                                                     </h3>
                                                     <div class="cart-price">
                                                         <span class="new">$ 229.9</span>
@@ -170,13 +177,13 @@
                                             </li>
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html">
+                                                    <a href="404.html">
                                                         <img src="img/product/pro2.jpg" alt="" />
                                                     </a>
                                                 </div>
                                                 <div class="cart-content">
                                                     <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
+                                                        <a href="404.html">Black & White Shoes</a>
                                                     </h3>
                                                     <div class="cart-price">
                                                         <span class="new">$ 229.9</span>
@@ -193,13 +200,13 @@
                                             </li>
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html">
+                                                    <a href="404.html">
                                                         <img src="img/product/pro3.jpg" alt="" />
                                                     </a>
                                                 </div>
                                                 <div class="cart-content">
                                                     <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
+                                                        <a href="404.html">Black & White Shoes</a>
                                                     </h3>
                                                     <div class="cart-price">
                                                         <span class="new">$ 229.9</span>
@@ -449,43 +456,47 @@
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-3">
                             <div class="footer-widget mb-40">
-                                <h3>Social Media</h3>
-                                <ul class="footer-link">
-                                    <li><a href="404.html">Facebook</a></li>
-                                    <li><a href="404.html">Twitter</a></li>
-                                    <li><a href="404.html">Behance</a></li>
-                                    <li><a href="404.html"> Dribbble</a></li>
-                                    <li><a href="404.html">Linkedin</a></li>
-                                    <li><a href="404.html">Youtube</a></li>
-                                </ul>
-                            </div>
+  <h3>Social Media</h3>
+
+  <div class="social-icons">
+    <a href="404.html" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="404.html" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="404.html" title="Behance"><i class="fab fa-behance"></i></a>
+    <a href="404.html" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+    <a href="404.html" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="404.html" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+
                         </div>
                         <div class="col-xl-3 col-lg-2 col-md-3 d-md-none d-xl-block">
                             <div class="footer-widget pl-50 mb-40">
-                                <h3>Location</h3>
+                                <h3>Quick Links</h3>
                                 <ul class="footer-link">
-                                    <li><a href="404.html">New York</a></li>
-                                    <li><a href="404.html">Tokyo</a></li>
-                                    <li><a href="404.html">Dhaka</a></li>
-                                    <li><a href="404.html">Chittagong</a></li>
-                                    <li><a href="404.html">China</a></li>
-                                    <li><a href="404.html">Japan</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop-full.html">Shop</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-3 col-md-3">
-                            <div class="footer-widget mb-40">
-                                <h3>About</h3>
-                                <ul class="footer-link">
-                                    <li><a href="404.html">Terms & Conditions</a></li>
-                                    <li><a href="404.html"> Privacy Policy</a></li>
-                                    <li><a href="404.html">Contact Us</a></li>
-                                    <li><a href="404.html">FAQ</a></li>
-                                    <li><a href="404.html">Wholesale</a></li>
-                                    <li><a href="404.html">Direction</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                       <div class="col-xl-2 col-lg-3 col-md-3">
+    <div class="footer-widget mb-40">
+        <h3>Our Location</h3>
+        <div class="footer-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.901980541907!2d-74.00594118459403!3d40.71278377933039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3163f2e4b3%3A0x47a56d6c6c9df11a!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1701372812345!5m2!1sen!2sin" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -540,6 +551,29 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+                <script>
+document.querySelectorAll(".dropdown-arrow").forEach(function(arrow) {
+
+  arrow.addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent menu collapse
+
+    let parent = this.parentElement;
+    let submenu = parent.querySelector(".submenu");
+
+    // Toggle
+    parent.classList.toggle("open");
+
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }
+
+  });
+
+});
+</script>
     </body>
 
 <!-- Mirrored from wphix.com/template/vue/vue/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:50 GMT -->
