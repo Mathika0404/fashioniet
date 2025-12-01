@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
     
-<!-- Mirrored from wphix.com/template/vue/vue/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:48 GMT -->
+<!-- Mirrored from wphix.com/template/vue/vue/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:50 GMT -->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -28,20 +28,30 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
     </head>
-
-<style>
-.bakix-video{
-    width: 100%;
+        <style>
+.plus-icon {
+  margin-left: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  pointer-events: none; /* prevents click conflict */
 }
 
-.bakix-video img{
-    width: 100%;
-    height: auto;
-    display: block;
+/* Rotate plus when hover (optional) */
+.has-dropdown:hover .plus-icon {
+  transform: rotate(45deg);
+  transition: 0.3s;
 }
-</style>
 
+/* HIDE plus icon on mobile */
+@media (max-width: 768px) {
+  .plus-icon {
+    display: none;
+  }
+}
+
+    </style>
     <body>
+
 
         <!-- preloader -->
         <div id="preloader">
@@ -52,22 +62,24 @@
         </div>
         <!-- preloader end  -->
 
+
+
         <!-- header start -->
-        <header>
-            <div id="header-sticky" class="header-area box-90">
+        <header class="transparent-header">
+            <div class="header-area box-90">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="col-xl-2 col-lg-6 col-md-6 col-7 col-sm-5 d-flex align-items-center pos-relative">
-                            <div class="basic-bar cat-toggle">
+                        <div class="col-xl-2 col-lg-6 col-md-6 col-7 col-sm-3 d-flex align-items-center">
+                            <!-- <div class="basic-bar cat-toggle">
                                 <span class="bar1"></span>
                                 <span class="bar2"></span>
                                 <span class="bar3"></span>
-                            </div>
+                            </div> -->
                             <div class="logo">
-                                <a href="index-2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 70px;" alt="stackly_logo"></a>
+                                <a href="index2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 70px;" alt="stackly_logo"></a>
                             </div>
 
-                            <div class="category-menu">
+                            <!-- <div class="category-menu">
                                 <h4>Category</h4>
                                 <ul>
                                     <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Men</a></li>
@@ -75,52 +87,55 @@
                                     <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Cloth</a></li>
                                     <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Trend</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="col-xl-8 col-lg-6 col-md-8 col-8 d-none d-xl-block">
                             <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li>
-                                            <a href="index-2.html">Home</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="index-4.html">Home Style 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                                                                                                    <li class="has-dropdown">
+  <a href="index2.html">
+    Home <span class="plus-icon">+</span>
+  </a>
+  <ul class="submenu">
+    <li>
+      <a href="index.html">Home Page 1</a>
+    </li>
+  </ul>
+</li>
                                         <li class="mega-menu">
-                                            <a href="shop-full.html">Shop</a>
+                                            <a href="blog.html">Blog</a>
                                         </li>
+                                        
                                         <li>
                                             <a href="#">Pages</a>
                                             <ul class="submenu">
-                                                <li>
-                                                    <a href="about.html">About Us</a>
+                                              <li>
+                                                    <a href="about2.html">About Us</a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="contact.html">Contact Us</a>
+                                                    <a href="contact2.html">Contact Us</a>
                                                 </li>
                                                 <li>
-                                                    <a href="login.html">login</a>
+                                                    <a href="login2.html">login</a>
                                                 </li>
                                                 <li>
-                                                    <a href="register.html">Register</a>
+                                                    <a href="registe2r.html">Register</a>
                                                 </li>
                                                 <li>
-                                                    <a href="cart.html">Shoping Cart</a>
+                                                    <a href="cart2.html">Shoping Cart</a>
                                                 </li>
                                                 <li>
-                                                    <a href="checkout.html">Checkout</a>
+                                                    <a href="checkout2.html">Checkout</a>
                                                 </li>
                                                 <li>
-                                                    <a href="wishlist.html">Wishlist</a>
+                                                    <a href="wishlist2.html">Wishlist</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="contact2.html">Contact</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -129,19 +144,19 @@
                         <div class="col-xl-2 col-lg-6 col-md-6 col-5 col-sm-7 pl-0">
                             <div class="header-right f-right">
                                 <ul>
-                                    <li class="login-btn"><a href="login.html"><i class="far fa-user"></i></a></li>
+                                    <li class="login-btn"><a href="login2.html"><i class="far fa-user"></i></a></li>
                                     <li class="d-shop-cart"><a href="#"><i class="flaticon-shopping-cart"></i> <span
                                                 class="cart-count">3</span></a>
                                         <ul class="minicart">
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html">
-                                                        <img src="img/product/pro1.jpg" alt="" />
+                                                    <a href="404.html">
+                                                        <img src="img/product/pro14.jpg" alt="" />
                                                     </a>
                                                 </div>
                                                 <div class="cart-content">
                                                     <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
+                                                        <a href="404.html">Black & White Shoes</a>
                                                     </h3>
                                                     <div class="cart-price">
                                                         <span class="new">$ 229.9</span>
@@ -158,13 +173,13 @@
                                             </li>
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html">
-                                                        <img src="img/product/pro2.jpg" alt="" />
+                                                    <a href="404.html">
+                                                        <img src="img/product/pro20.jpg" alt="" />
                                                     </a>
                                                 </div>
                                                 <div class="cart-content">
                                                     <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
+                                                        <a href="404.html">Black & White Shoes</a>
                                                     </h3>
                                                     <div class="cart-price">
                                                         <span class="new">$ 229.9</span>
@@ -181,13 +196,13 @@
                                             </li>
                                             <li>
                                                 <div class="cart-img">
-                                                    <a href="product-details.html">
-                                                        <img src="img/product/pro3.jpg" alt="" />
+                                                    <a href="404.html">
+                                                        <img src="img/product/pro25.jpg" alt="" />
                                                     </a>
                                                 </div>
                                                 <div class="cart-content">
                                                     <h3>
-                                                        <a href="product-details.html">Black & White Shoes</a>
+                                                        <a href="404.html">Black & White Shoes</a>
                                                     </h3>
                                                     <div class="cart-price">
                                                         <span class="new">$ 229.9</span>
@@ -237,10 +252,10 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="breadcrumb-text text-center">
-                            <h1>About Us</h1>
+                            <h1>Contact Us</h1>
                             <ul class="breadcrumb-menu">
                                 <li><a href="index.html">home</a></li>
-                                <li><span>About</span></li>
+                                <li><span>Contact</span></li>
                             </ul>
                         </div>
                     </div>
@@ -249,162 +264,101 @@
         </section>
         <!-- breadcrumb-area-end -->
 
-            <!-- page-title-area end -->
-            <section class="about-area pt-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5">
-                            <div class="section-title mb-25">
-                                <p><span></span> Community</p>
-                                <h1>Get Every Updates</h1>
-                            </div>
-                            <div class="about-community mb-30">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna
-                                    ali qua. Ut enim ad minim veniam, quis nostrud exercit ation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat.
-                                    Duis aute irure dolor veniam.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-7">
-                            <div class="about-community-text mb-30">
-                                <p>Vue is an Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat.
-                                    Duis aute irure dolor.</p>
-                                <p>Korem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                            </div>
+        <!-- contact-area start -->
+        <section class="contact-area pt-120 pb-90" data-background="assets/img/bg/bg-map.html">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="contact text-center mb-30">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Mail Here</h3>
+                            <p><a href="https://wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4e5c0c9cdcae4e6c5d7cdc7f0ccc1c9c18ac7cbc9">[info@thestackly.com]</a></p>
+                            <p><a href="https://wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="561f38303916023e333b332623247835393b">[info2@thestackly.com]</a></p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="overview text-center mt-90">
-                                <p>Vue helps artists, musicians, filmmakers,
-                                designers, and other creators find the resources ideas a
-                                reality. To date, tens of
-                                thousands of creative projects big and small have come to life with the support of the
-                                vue special community.</p>
-                            </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="contact text-center mb-30">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Visit Here</h3>
+                            <p>27 Division St, New York, NY 10002,
+                                Jaklina, United Kingpung</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4  col-lg-4 col-md-4 ">
+                        <div class="contact text-center mb-30">
+                            <i class="fas fa-phone"></i>
+                            <h3>Call Here</h3>
+                            <p>+91 9047366578</p>
+                            <p>+91 8788978777</p>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="video-area">
-                <div class="bakix-video">
-                    <img src="img/product/download (12).png" alt="">
-                </div>
-            </section>
-            <section class="mission-area pt-100 pb-70 ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 d-lg-none d-xl-block">
-                            <div class="mission-img mb-30">
-                                <img src="img/bg/mission.jpg" alt="">
+            </div>
+        </section>
+        <!-- contact-area end -->
+
+        <!-- contact-form-area start -->
+        <section class="contact-form-area grey-bg pt-100 pb-100">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-lg-8">
+                            <div class="section-title mb-55">
+                                <p><span></span> Anything On your Mind</p>
+                                <h1>Estimate Your Idea</h1>
                             </div>
                         </div>
-                        <div class="col-xl-7">
-                            <div class="mission-text mb-30">
-                                <div class="mission-title mb-30">
-                                    <p><span></span> Our Mission</p>
-                                    <h1>Our Mission Is To
-                                        Help Bring Creative
-                                        Project To Life.</h1>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat.
-                                    Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                                <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                    in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia
-                                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
-                                    voluptatem accusantium
-                                    doloremque laudantium.</p>
+                        <div class="col-xl-4 col-lg-3 d-none d-xl-block ">
+                            <div class="section-link mb-80 text-right">
+                                <a class="btn theme-btn" href="404.html"><i class="fas fa-phone"></i> make call</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="big-team-area">
-                <div class="big-image">
-                    <img src="img/bg/banner.jpg" alt="">
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="testimonial-active owl-carousel theme-bg">
-                                <div class="testimonial-item text-center">
-                                    <p>“Vue is one of those platforms that gives you space to work with people who know you, love
-                                        you, and support you.”</p>
-                                    <span>- Salim Rana</span>
+                    <div class="contact-form">
+                        <form id="contact-form" action="#">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-box user-icon mb-30">
+                                        <input type="text" name="name" placeholder="Your Name">
+                                    </div>
                                 </div>
-                                <div class="testimonial-item text-center">
-                                    <p>“Vue is one of those platforms that gives you space to work with people who know you, love
-                                        you, and support you.”</p>
-                                    <span>- Jason Derula</span>
+                                <div class="col-lg-6">
+                                    <div class="form-box email-icon mb-30">
+                                        <input type="text" name="email" placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-box phone-icon mb-30">
+                                        <input type="text" name="phone" placeholder="Your Phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-box subject-icon mb-30">
+                                        <input type="text" name="subject" placeholder="Your Subject">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-box message-icon mb-30">
+                                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div class="contact-btn text-center">
+                                       <button class="btn theme-btn" type="button" onclick="window.location.href='404.html'">
+  Get Action
+</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                        <p class="ajax-response text-center"></p>
                     </div>
                 </div>
-            </section>
-            <!-- team-area start -->
-            <section class="team-area pt-100 pb-70">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="area-title text-center mb-50">
-                                <h2>Awesome Team</h2>
-                                <p>Our one of the best team members</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="team mb-30">
-                                <div class="team__img">
-                                    <img src="img/team/team4.jpg" alt="">
-                                </div>
-                                <div class="team__content text-center white-bg">
-                                    <h4>Salim Rana</h4>
-                                    <span>Founder</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="team mb-30">
-                                <div class="team__img">
-                                    <img src="img/team/team5.jpg" alt="">
-                                </div>
-                                <div class="team__content text-center white-bg">
-                                    <h4>James Tablon</h4>
-                                    <span>Designer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="team mb-30">
-                                <div class="team__img">
-                                    <img src="img/team/team6.jpg" alt="">
-                                </div>
-                                <div class="team__content text-center white-bg">
-                                    <h4>Mikado Rikoda</h4>
-                                    <span>marketing</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- team-area end -->
+            </div>
+        </section>
+        <!-- contact-form-area end -->
+
+        <section class="map-area">
+            <div id="contact-map" class="contact-map"></div>
+        </section>
 
 
         </main>
@@ -417,7 +371,7 @@
                         <div class="col-xl-5 col-lg-6 col-md-6 ">
                             <div class="footer-widget mb-40 pr-70">
                                 <div class="footer-logo">
-                                    <a href="index-2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 100px;" alt="stackly_logo"></a>
+                                    <a href="index.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 100px;" alt="stackly_logo"></a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore mag na
@@ -512,7 +466,7 @@
 
 
 		<!-- JS here -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor/jquery-1.12.4.min.js"></script>
         <script src="js/jquery-ui.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -526,9 +480,10 @@
         <script src="js/jquery.final-countdown.min.js"></script>
         <script src="js/imagesloaded.pkgd.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvEEMx3XDpByNzYNn0n62Zsq_sVYPx1zY"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
     </body>
 
-<!-- Mirrored from wphix.com/template/vue/vue/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:50 GMT -->
+<!-- Mirrored from wphix.com/template/vue/vue/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Oct 2023 08:30:50 GMT -->
 </html>

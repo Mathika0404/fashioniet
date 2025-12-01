@@ -28,6 +28,28 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
     </head>
+        <style>
+.plus-icon {
+  margin-left: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  pointer-events: none; /* prevents click conflict */
+}
+
+/* Rotate plus when hover (optional) */
+.has-dropdown:hover .plus-icon {
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+/* HIDE plus icon on mobile */
+@media (max-width: 768px) {
+  .plus-icon {
+    display: none;
+  }
+}
+
+    </style>
     <body>
 
 
@@ -48,71 +70,61 @@
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-6 col-md-6 col-7 col-sm-5 d-flex align-items-center pos-relative">
-                            <div class="basic-bar cat-toggle">
-                                <span class="bar1"></span>
-                                <span class="bar2"></span>
-                                <span class="bar3"></span>
-                            </div>
+                            
                             <div class="logo">
-                                <a href="./homepage_2/index2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 70px;" alt="stackly_logo"></a>
+                                <a href="index2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 70px;" alt="stackly_logo"></a>
                             </div>
 
-                            <div class="category-menu">
-                                <h4>Category</h4>
-                                <ul>
-                                    <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Men</a></li>
-                                    <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Women</a></li>
-                                    <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Cloth</a></li>
-                                    <li><a href="shop.html"><i class="flaticon-shopping-cart-1"></i> Trend</a></li>
-                                </ul>
-                            </div>
+                           
                         </div>
                         <div class="col-xl-8 col-lg-6 col-md-8 col-8 d-none d-xl-block">
                             <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li>
-                                            <a href="homepage_2/index2.html">Home</a>
-                                            <ul class="submenu">
-                                                <li>
-                                                    <a href="./index.html">Home Style 1</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                                                                                                     <li class="has-dropdown">
+  <a href="index2.html">
+    Home <span class="plus-icon">+</span>
+  </a>
+  <ul class="submenu">
+    <li>
+      <a href="index.html">Home Page 1</a>
+    </li>
+  </ul>
+</li>
 
                                            <li>
-                                            <a href="shop-filter.html">Products </a>
+                                            <a href="blog.html">Blog</a>
                                         </li>
 
                                         <li>
                                             <a href="#">Pages</a>
                                             <ul class="submenu">
-                                                <li>
-                                                    <a href="about.html">About Us</a>
+                                                 <li>
+                                                    <a href="about2.html">About Us</a>
                                                 </li>
 
                                                 <li>
-                                                    <a href="contact.html">Contact Us</a>
+                                                    <a href="contact2.html">Contact Us</a>
                                                 </li>
                                                 <li>
-                                                    <a href="login.html">login</a>
+                                                    <a href="login2.html">login</a>
                                                 </li>
                                                 <li>
-                                                    <a href="register.html">Register</a>
+                                                    <a href="registe2r.html">Register</a>
                                                 </li>
                                                 <li>
-                                                    <a href="cart.html">Shoping Cart</a>
+                                                    <a href="cart2.html">Shoping Cart</a>
                                                 </li>
                                                 <li>
-                                                    <a href="checkout.html">Checkout</a>
+                                                    <a href="checkout2.html">Checkout</a>
                                                 </li>
                                                 <li>
-                                                    <a href="wishlist.html">Wishlist</a>
+                                                    <a href="wishlist2.html">Wishlist</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="contact2.html">Contact</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -121,7 +133,7 @@
                         <div class="col-xl-2 col-lg-6 col-md-6 col-5 col-sm-7 pl-0">
                             <div class="header-right f-right">
                                 <ul>
-                                    <li class="login-btn"><a href="login.html"><i class="far fa-user"></i></a></li>
+                                    <li class="login-btn"><a href="login2.html"><i class="far fa-user"></i></a></li>
                                     <li class="d-shop-cart"><a href="#"><i class="flaticon-shopping-cart"></i> <span
                                                 class="cart-count">3</span></a>
                                         <ul class="minicart">
