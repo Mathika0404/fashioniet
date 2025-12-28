@@ -200,6 +200,43 @@
   opacity: 0.8;
 }
 
+.single-slider {
+  background-size: cover;
+  background-position: center;
+  animation: fastFashionZoom 4s ease-in-out infinite;
+}
+
+@keyframes fastFashionZoom {
+  0%   { background-size: 100%; }
+  50%  { background-size: 120%; }
+  100% { background-size: 100%; }
+}
+
+/* Animate all banner images EXCEPT the look icon */
+.banner-2 img:not([src*="look.webp"]) {
+  width: 100%;
+  display: block;
+  animation: zoomRotate 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Keyframes */
+@keyframes zoomRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  60% {
+    transform: scale(1.15) rotate(-2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
     </style>
     <body>
 
@@ -2256,6 +2293,7 @@ function setSliderBackgrounds() {
 
 // Call on page load and after slider init
 document.addEventListener('DOMContentLoaded', setSliderBackgrounds);
+
 
 </script>
 
