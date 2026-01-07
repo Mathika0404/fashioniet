@@ -200,6 +200,43 @@
   opacity: 0.8;
 }
 
+.single-slider {
+  background-size: cover;
+  background-position: center;
+  animation: fastFashionZoom 4s ease-in-out infinite;
+}
+
+@keyframes fastFashionZoom {
+  0%   { background-size: 100%; }
+  50%  { background-size: 120%; }
+  100% { background-size: 100%; }
+}
+
+/* Animate all banner images EXCEPT the look icon */
+.banner-2 img:not([src*="look.webp"]) {
+  width: 100%;
+  display: block;
+  animation: zoomRotate 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Keyframes */
+@keyframes zoomRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  60% {
+    transform: scale(1.15) rotate(-2deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
     </style>
     <body>
 
@@ -214,7 +251,7 @@
         <!-- preloader end  -->
 
 
-        <!-- header start -->
+       <!-- header start -->
         <header class="transparent-header">
             <div class="header-area box-90">
                 <div class="container-fluid">
@@ -222,12 +259,13 @@
                         <div class="col-xl-2 col-lg-6 col-md-6 col-7 col-sm-3 d-flex align-items-center">
                             
                             <div class="logo">
-                                <a href="index.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 70px;" alt="stackly_logo"></a>
+                                <a href="index.html"><img src="img/logo/stackly_logo.webp" style="width: 300px; height: 70px;" alt="stackly_logo"></a>
                             </div>
-                          
+
+                            
                         </div>
-                        <div class="col-xl-7 col-lg-6 col-md-8 col-8 d-none d-xl-block">
-                            <div class="main-menu">
+                        <div class="col-xl-8 col-lg-6 col-md-8 col-8 d-none d-xl-block">
+                            <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
 <li class="has-dropdown">
@@ -256,10 +294,12 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-5 col-sm-9 pl-0">
+                        <div class="col-xl-2 col-lg-6 col-md-6 col-5 col-sm-7 pl-0">
                             <div class="header-right f-right">
                                 <ul>
                                     <li class="login-btn"><a href="login.html"><i class="far fa-user"></i></a></li>
+                                   
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -272,6 +312,7 @@
         </header>
         <!-- header end -->
 
+
         <main>
             <!-- slider-area start -->
             <section class="slider-area pos-relative">
@@ -281,7 +322,7 @@
                             <h2>2019</h2>
                         </div>
                         <div class="shape-icon bounce-animate">
-                            <img src="img/slider/shape-icon.webp" alt="">
+                            <img src="img/slider/shape-icon.webp" alt="icon">
                         </div>
                         <div class="container-fluid">
                             <div class="row">
@@ -307,7 +348,7 @@
                             <h2 class="home-2-shape">2019</h2>
                         </div>
                         <div class="shape-icon bounce-animate">
-                            <img src="img/slider/shape-icon.webp" alt="">
+                            <img src="img/slider/shape-icon.webp" alt="icon">
                         </div>
                         <div class="container-fluid">
                             <div class="row">
@@ -333,7 +374,7 @@
                             <h2 class="home-2-shape">2019</h2>
                         </div>
                         <div class="shape-icon bounce-animate">
-                            <img src="img/slider/shape-icon.webp" alt="">
+                            <img src="img/slider/shape-icon.webp" alt="icon">
                         </div>
                         <div class="container-fluid">
                             <div class="row">
@@ -364,7 +405,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="banner-2 pos-relative mb-30">
-                                <a href="shop.html"><img src="img/banner/banner-2/banner1.webp" alt=""></a>
+                                <a href="shop.html"><img src="img/banner/banner-2/banner1.webp" alt="banner image"></a>
                                 <div class="banner-trend">
                                     <span>Trendy Item</span>
                                     <h2><a href="404.html">New Year Trend Coming 2019</a></h2>
@@ -373,11 +414,11 @@
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="banner-2 pos-relative mb-30">
-                                <a href="shop.html"><img src="img/banner/banner-2/banner2.webp" alt=""></a>
+                                <a href="shop.html"><img src="img/banner/banner-2/banner2.webp" alt="banner image"></a>
                                 <div class="banner-look">
                                     <span>Get the look</span>
                                     <h2>Festive Looks</h2>
-                                    <img src="img/icon/look.webp" alt="">
+                                    <img src="img/icon/look.webp" alt="icon">
                                     <p>Your delivery of outfit ideas, updated daily</p>
                                     <a href="shop-full.html" class="btn theme-btn">discover</a>
                                 </div>
@@ -409,8 +450,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro13.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro13.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -447,8 +488,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro14.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="">
+                                                            <img src="img/product/pro14.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -487,8 +528,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -525,8 +566,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -564,8 +605,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro17.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="">
+                                                            <img src="img/product/pro17.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -602,8 +643,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro18.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro18.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -642,8 +683,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro19.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="">
+                                                            <img src="img/product/pro19.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -679,8 +720,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro20.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro20.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -719,8 +760,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -758,8 +799,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -802,8 +843,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro19.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="">
+                                                            <img src="img/product/pro19.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -839,8 +880,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro20.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro20.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -879,8 +920,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -917,8 +958,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -956,8 +997,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro13.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro13.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -994,8 +1035,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro14.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro14.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1037,8 +1078,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1075,8 +1116,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1114,8 +1155,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro17.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="">
+                                                            <img src="img/product/pro17.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1152,8 +1193,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro18.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro18.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1196,8 +1237,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro17.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="">
+                                                            <img src="img/product/pro17.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1234,8 +1275,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro18.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro18.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1274,8 +1315,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                        <a href="404.html">
-                                                            <img src="img/product/pro13.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro13.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1312,8 +1353,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">Jackets</a>
-                                                            <img src="img/product/pro14.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro14.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1352,8 +1393,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                        <a href="404.html">Jackets</a>
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1390,8 +1431,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1429,8 +1470,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro19.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="">
+                                                            <img src="img/product/pro19.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1466,8 +1507,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro20.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro20.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1506,8 +1547,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1544,8 +1585,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1587,8 +1628,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro17.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="">
+                                                            <img src="img/product/pro17.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro18.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1625,8 +1666,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro18.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro18.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1667,8 +1708,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro13.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro13.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1705,8 +1746,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro14.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="">
+                                                            <img src="img/product/pro14.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro14.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1745,8 +1786,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1784,8 +1825,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro16.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="">
+                                                            <img src="img/product/pro16.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro17.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1823,8 +1864,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro19.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="">
+                                                            <img src="img/product/pro19.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro20.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1860,8 +1901,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro20.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="">
+                                                            <img src="img/product/pro20.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro19.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -1900,8 +1941,8 @@
                                                 <div class="product-wrapper mb-50">
                                                     <div class="product-img mb-25">
                                                         <a href="404.html">
-                                                            <img src="img/product/pro15.webp" alt="">
-                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="">
+                                                            <img src="img/product/pro15.webp" alt="dress">
+                                                            <img class="secondary-img" src="img/product/pro16.webp" alt="dress">
                                                         </a>
                                                         <div class="product-action text-center">
                                                             <a href="404.html" title="Shoppingb Cart">
@@ -2256,6 +2297,7 @@ function setSliderBackgrounds() {
 
 // Call on page load and after slider init
 document.addEventListener('DOMContentLoaded', setSliderBackgrounds);
+
 
 </script>
 

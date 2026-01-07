@@ -38,7 +38,7 @@
   margin-left: 6px;
   font-size: 14px;
   user-select: none;
-    color: white; /* arrow color */
+    color: black; /* arrow color */
 }
 
 /* Rotate arrow when open */
@@ -80,6 +80,45 @@
 }
 
 
+/* Banner container */
+.banner-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Apply animation ONLY to main banner images */
+.banner-2 > a img {
+  width: 100%;
+  display: block;
+  transform-origin: center;
+  animation: zoomOutRotate 6s ease-in-out infinite;
+}
+
+/* EXCLUDE the look icon */
+.banner-2 img[src*="look.webp"] {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Zoom-OUT then Rotate animation */
+@keyframes zoomOutRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  40% {
+    transform: scale(0.9) rotate(0deg); /* zoom-OUT */
+  }
+
+  70% {
+    transform: scale(0.9) rotate(6deg); /* rotate */
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg); /* reset smoothly */
+  }
+}
+
 
     </style>
     <body>
@@ -95,20 +134,21 @@
         <!-- preloader end  -->
 
 
-        <!-- header start -->
-        <header class="transparent-header transparent-header-2">
+       <!-- header start -->
+        <header class="transparent-header">
             <div class="header-area box-90">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-6 col-md-6 col-7 col-sm-3 d-flex align-items-center">
-                          
+                            
                             <div class="logo">
-                                <a href="index2.html"><img src="img/logo/stackly_logo.webp" style="width: 250px; height: 70px;" alt="stackly_logo"></a>
+                                <a href="index2.html"><img src="img/logo/stackly_logo.webp" style="width: 300px; height: 70px;" alt="stackly_logo"></a>
                             </div>
-                           
+
+                            
                         </div>
                         <div class="col-xl-8 col-lg-6 col-md-8 col-8 d-none d-xl-block">
-                            <div class="main-menu menu-white text-center">
+                            <div class="main-menu text-center">
                                 <nav id="mobile-menu">
                                     <ul>
 <li class="has-dropdown">
@@ -123,11 +163,10 @@
     </li>
   </ul>
 </li>
-                                            
-                                        <li>
-                                            <a href="blog.html">Blog </a>
+                                         <li class="mega-menu">
+                                            <a href="blog.html">Blog</a>
                                         </li>
-                                       
+                                        
                                         <li>
                                             <a href="contact2.html">Contact</a>
                                         </li>
@@ -135,7 +174,7 @@
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-6 col-md-6 col-5 col-sm-9 pl-0">
+                        <div class="col-xl-2 col-lg-6 col-md-6 col-5 col-sm-7 pl-0">
                             <div class="header-right f-right">
                                 <ul>
                                     <li class="login-btn"><a href="login2.html"><i class="far fa-user"></i></a></li>
